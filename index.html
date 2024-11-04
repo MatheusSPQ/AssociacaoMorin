@@ -3,49 +3,155 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Contato Associação</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Associação de Moradores do Morin</title>
+    <style>
+        body {
+            padding-top: 56px;
+            /* Para garantir que o conteúdo não fique atrás da navbar fixa */
+        }
+
+        .container {
+            margin-top: 0;
+            /* Remove o espaço entre o container e a navbar */
+            padding-top: 0;
+            /* Remove o padding do container */
+        }
+
+        .carousel,
+        .contact-form {
+            margin-top: 0;
+            /* Remove margens superiores das seções */
+        }
+    </style>
 </head>
 
 <body>
-    <h2>Contato da Associação</h2>
-    <form id="contact-form">
-        <label for="from_name">Nome:</label>
-        <input type="text" id="from_name" name="from_name" required><br>
 
-        <label for="from_email">E-mail:</label>
-        <input type="email" id="from_email" name="from_email" required><br>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" style="background-color: rgba(0, 0, 0, 0.7);">
+        <a class="navbar-brand" href="#">Morin</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#historiasBairro">História do Bairro</a> <!-- Link adicionado -->
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#messageForm">Contate-nos</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
-        <label for="subject">Assunto:</label>
-        <input type="text" id="subject" name="subject" required><br>
+    <header class="mb-4 shadow bg-light">
+        <h1 class="text-center my-4">Associação de Moradores do Morin</h1>
+    </header>
 
-        <label for="message">Mensagem:</label>
-        <textarea id="message" name="message" required></textarea><br>
 
-        <button type="submit">Enviar</button>
-    </form>
 
-    <script>
-        document.getElementById("contact-form").addEventListener("submit", async function (event) {
-            event.preventDefault();  // Evita o envio padrão do formulário
+    <main class="container">
+        <!-- Carrossel -->
+        <div id="carouselExampleIndicators" class="carousel slide mb-4 shadow" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="/imagens/castelinho.jpg" class="d-block w-100" alt="Imagem do Castelinho">
+                </div>
+                <div class="carousel-item">
+                    <img src="/imagens/castelinho.jpg" class="d-block w-100" alt="Imagem 2 do Castelinho">
+                </div>
+                <div class="carousel-item">
+                    <img src="/imagens/castelinho.jpg" class="d-block w-100" alt="Imagem 3 do Castelinho">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Próximo</span>
+            </a>
+        </div>
 
-            const formData = new FormData(this);
+        <div class="container my-5" id="historiasBairro">
+            <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+                <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+                    <h1 class="display-4 fw-bold lh-1">História do Bairro Morin</h1>
+                    <p class="lead">O bairro Morin, situado em Petrópolis, é um verdadeiro tesouro de história e beleza
+                        natural. A região foi moldada ao longo do tempo pelo famoso Caminho Novo, uma rota vital que
+                        conectava o interior ao litoral, desempenhando um papel crucial no desenvolvimento da cidade no
+                        século XIX.</p>
+                    <p class="lead">Uma das joias do bairro é a Trilha do Castelinho, que oferece vistas deslumbrantes
+                        da Baía de Guanabara e do Rio de Janeiro. Esta trilha é uma opção popular tanto para moradores
+                        quanto para turistas, reconhecida por sua acessibilidade e belas sinalizações, proporcionando
+                        uma experiência única em meio à natureza.</p>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
+                        <button type="button" class="btn btn-primary btn-lg px-4 me-md-2 fw-bold">Saiba Mais</button>
+                        <button type="button" class="btn btn-outline-secondary btn-lg px-4">Contate-nos</button>
+                    </div>
+                </div>
+                <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
+                    <img class="rounded-lg-3" src="/imagens/morinAntigo.jpg" alt="Caminho Novo" width="720">
+                </div>
+            </div>
+        </div>
 
-            try {
-                const response = await fetch("https://script.google.com/macros/s/AKfycbxI4jsjlYP1Cg_xzVWmv9xs2IEtbL8jDdMxND8mGQkhpW5xrV7F-9kkKM94Z3jO7KZ9/exec", {
-                    method: "POST",
-                    body: formData
+        <div class="contact-form mb-4 shadow bg-light p-4" id="messageForm">
+            <h2>Envie sua Mensagem</h2>
+            <p class="mb-3">Se você tem algum problema, dúvida, recomendação ou deseja algo da associação, não hesite em
+                nos contatar. Suas sugestões e feedback são essenciais para ajudarmos a melhorar nosso querido bairro
+                Morin!</p>
+            <form id="messageForm">
+                <div class="form-group">
+                    <label for="from_name">Nome:</label>
+                    <input type="text" class="form-control" id="from_name" name="from_name" required>
+                </div>
+                <div class="form-group">
+                    <label for="from_email">Email:</label>
+                    <input type="email" class="form-control" id="from_email" name="from_email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Assunto:</label>
+                    <input type="text" class="form-control" id="subject" name="subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensagem:</label>
+                    <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+                <p class="response-message" id="responseMessage"></p>
+            </form>
+        </div>
+
+        <footer class="text-center mt-4 shadow bg-light" style="padding: 20px;">
+            <p>&copy; 2024 Associação de Moradores do Morin. Todos os direitos reservados.</p>
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script>
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault(); // Previne o comportamento padrão de rolagem do navegador
+
+                    // Obtém o ID da seção alvo
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+
+                    // Desloca suavemente até a seção alvo
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth' // Faz a rolagem suave
+                    });
                 });
-                const result = await response.json();
-                if (result.status === "success") {
-                    alert("Mensagem enviada com sucesso!");
-                } else {
-                    alert("Erro ao enviar mensagem.");
-                }
-            } catch (error) {
-                alert("Erro na comunicação com o servidor.");
-            }
-        });
-    </script>
+            });
+        </script>
 </body>
 
 </html>

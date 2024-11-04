@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+header {
+    background-image: url('/imagens/morin_entrada.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.navbar {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Sombra na navbar */
+    background-color: transparent;
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff; /* Cor do texto */
+    transition: background-color 0.3s ease; /* Transição suave para o hover */
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Efeito de hover */
+    border-radius: 5px; /* Bordas arredondadas no hover */
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Sombreado escuro para melhorar a legibilidade do texto */
+    filter: blur(8px); /* Desfoque */
+    z-index: 1; /* Coloca a imagem desfocada atrás do texto */
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    position: relative; /* Para que o texto fique acima do fundo desfocado */
+    z-index: 2; /* Coloca o texto acima do fundo desfocado */
+}
+
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+
+
+.story {
+    margin: 20px 0;
+    text-align: center;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.story h2 {
+    margin-bottom: 15px;
+    font-size: 1.8em;
+}
+
+.contact-form {
+    margin-top: 20px;
+    background: #e9ecef;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    margin-bottom: 15px;
+    font-size: 1.8em;
+}
+
+.contact-form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    transition: border-color 0.3s;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+.contact-form button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact-form button:hover {
+    background: #0056b3;
+}
+
+.response-message {
+    margin-top: 10px;
+    color: green;
+    text-align: center;
+    font-weight: bold;
+}
+
+
