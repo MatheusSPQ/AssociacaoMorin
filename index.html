@@ -8,11 +8,6 @@
     <link rel="stylesheet" href="style.css">
     <title>Associação de Moradores do Morin</title>
     <style>
-        body {
-            padding-top: 56px;
-            /* Para garantir que o conteúdo não fique atrás da navbar fixa */
-        }
-
         .container {
             margin-top: 0;
             /* Remove o espaço entre o container e a navbar */
@@ -49,37 +44,40 @@
         </div>
     </nav>
 
-    <header class="mb-4 shadow bg-light">
+
+    <header class="mb-0 shadow bg-light">
         <h1 class="text-center my-4">Associação de Moradores do Morin</h1>
     </header>
 
-
-
-    <main class="container">
-        <!-- Carrossel -->
-        <div id="carouselExampleIndicators" class="carousel slide mb-4 shadow" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="/imagens/castelinho.jpg" class="d-block w-100" alt="Imagem do Castelinho">
-                </div>
-                <div class="carousel-item">
-                    <img src="/imagens/castelinho.jpg" class="d-block w-100" alt="Imagem 2 do Castelinho">
-                </div>
-                <div class="carousel-item">
-                    <img src="/imagens/castelinho.jpg" class="d-block w-100" alt="Imagem 3 do Castelinho">
-                </div>
+    <!-- Carrossel -->
+    <div id="carouselExampleIndicators" class="carousel slide mb-4 shadow-lg w-100 " data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="/imagens/castelinho.jpg" class="d-block w-100" alt="Imagem do Castelinho">
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Anterior</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Próximo</span>
-            </a>
+            <div class="carousel-item">
+                <img src="/imagens/castelinho.jpg" class="d-block w-100" alt="Imagem 2 do Castelinho">
+            </div>
+            <div class="carousel-item">
+                <img src="/imagens/castelinho.jpg" class="d-block w-100" alt="Imagem 3 do Castelinho">
+            </div>
         </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Próximo</span>
+        </a>
+    </div>
 
-        <div class="container my-5" id="historiasBairro">
+    <main class="container-fluid">
+
+
+
+
+        <div class=" container my-5" id="historiasBairro">
             <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
                 <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
                     <h1 class="display-4 fw-bold lh-1">História do Bairro Morin</h1>

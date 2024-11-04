@@ -46,7 +46,7 @@ header::before {
     right: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 0.5); /* Sombreado escuro para melhorar a legibilidade do texto */
-    filter: blur(8px); /* Desfoque */
+    filter: blur(2px); /* Desfoque */
     z-index: 1; /* Coloca a imagem desfocada atrás do texto */
 }
 
@@ -58,11 +58,7 @@ h1 {
 }
 
 
-main {
-    padding: 20px;
-    max-width: 800px;
-    margin: auto;
-}
+
 
 
 
@@ -98,6 +94,18 @@ main {
     margin: 10px 0 5px;
     font-weight: bold;
 }
+
+#carouselExampleIndicators {
+    width: 100%;; /* Ajuste a largura máxima conforme necessário */
+    margin: 0 auto; /* Centraliza o carrossel */
+}
+
+.carousel-inner img {
+    width: 100%; /* Faz com que a imagem ocupe toda a largura do contêiner */
+    height: 400px; /* Defina a altura desejada para as imagens */
+    object-fit: cover; /* Garante que a imagem preencha o contêiner sem distorcer */
+}
+
 
 .contact-form input, .contact-form textarea {
     width: 100%;
